@@ -1,0 +1,77 @@
+package Serialization;
+
+import java.io.*;
+
+public class SerializationDemo{
+
+    public void serialize(Student student) throws IOException {
+
+        System.out.println("Serialization started");
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("file.ser"));
+        oos.writeObject(student);
+        System.out.println("Serialization Ended");
+    }
+
+    public Student deserialize(String fileName) throws IOException, ClassNotFoundException {
+        System.out.println("Deserialization Started!!");
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName));
+        Student deserializedStudent = (Student) ois.readObject();
+        System.out.println("Deserialization Ended!!");
+        return deserializedStudent;
+    }
+}
+
+class SerializableMain {
+
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        SerializationDemo serializationDemo = new SerializationDemo();
+        Student student = new Student("Manish", 123L);
+        serializationDemo.serialize(student);
+
+        /*************************************/
+
+        Student deserialize = serializationDemo.deserialize("file.ser");
+
+        System.out.println(deserialize);
+
+    }
+
+}
+
+class Student implements Serializable{
+
+    private String name;
+    private long Id;
+
+    public Student(String name, long id) {
+        this.name = name;
+        Id = id;
+    }
+
+    public Student() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public long getId() {
+        return Id;
+    }
+
+    public void setId(long id) {
+        Id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", Id=" + Id +
+                '}';
+    }
+}
