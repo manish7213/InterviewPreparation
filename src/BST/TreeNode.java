@@ -1,4 +1,4 @@
-package LinkedList;
+package BST;
 
 public class TreeNode {
     public int val;

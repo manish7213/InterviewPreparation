@@ -1,4 +1,4 @@
-package LinkedList;
+package BST;
 
 
 import java.util.List;

@@ -1,78 +1,26 @@
 package LinkedList;
 
-import java.util.*;
+import java.util.PriorityQueue;
 
 class Solution {
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        if (root == null) return List.of();
-        List<List<Integer>> list = new ArrayList<>();
-        bfs(root, list);
-        return list;
-    }
+    public ListNode mergeKLists(ListNode[] lists) {
+        PriorityQueue<Integer> heap = new PriorityQueue<>(); // minHeap
 
-    private void bfs(TreeNode node, List<List<Integer>> list) {
+        ListNode dummy = new ListNode(-1);
+        ListNode temp = dummy;
 
-        Queue<TreeNode> queue = new LinkedList<>();
-        Stack<List<Integer>> stack = new Stack<>();
-        queue.add(node);
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            List<Integer> eachLevel = new ArrayList<>();
-
-            for (int i = 0; i < size; i++) {
-                TreeNode temp = queue.poll();
-                eachLevel.add(temp.val);
-
-                if (temp.left != null) {
-                    queue.add(temp.left);
-                }
-
-                if (temp.right != null) {
-                    queue.add(temp.right);
-                }
+        for (ListNode head : lists) {
+            while (head != null) {
+                heap.add(head.val);
+                head = head.next;
             }
-            stack.push(eachLevel);
         }
-        while (!stack.isEmpty()) {
-            list.add(stack.pop());
+
+        while (!heap.isEmpty()) {
+            temp.next = new ListNode(heap.remove());
+            temp = temp.next;
         }
+
+        return dummy.next;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
