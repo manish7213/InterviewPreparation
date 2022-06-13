@@ -38,9 +38,9 @@ public class MaximumSumOfSubArrayOfGivenSize {
 
     private static int findMaxSumBruteForce(int[] arr, int k) {
         int maxSum = Integer.MIN_VALUE;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i <= arr.length - k; i++) {
             int sum = 0;
-            for (int j = i; j < i + k && j < arr.length; j++) {
+            for (int j = i; j < i + k; j++) {
                 sum = sum + arr[j];
                 if (sum > maxSum) {
                     maxSum = sum;
