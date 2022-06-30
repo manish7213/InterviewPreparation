@@ -14,6 +14,7 @@ public class DetectCycle {
         return null;
     }
 
+
     public ListNode findCycleStartPos(ListNode head) {
         ListNode meetingPoint = detectCycle(head);
         ListNode start = head;

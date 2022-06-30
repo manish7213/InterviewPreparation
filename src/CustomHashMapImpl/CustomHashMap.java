@@ -18,7 +18,7 @@ public class CustomHashMap<K, V> {
 
     public void put(K key, V value) {
         int index = index(key);
-        CustomEntry<K, V> newEntry = new CustomEntry<K, V>(key, value, null);
+        CustomEntry<K, V> newEntry = new CustomEntry<>(key, value, null);
         if (buckets[index] == null) {
             buckets[index] = newEntry;
         } else {
