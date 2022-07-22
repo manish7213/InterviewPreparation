@@ -3,7 +3,7 @@ package Recursion;
 public class IsPalindrome {
 
     public static void main(String[] args) {
-        String s = "abbaca";
+        String s = "123456";
         System.out.println(isPalindrome(s, 0, s.length() - 1));
     }
     private static boolean isPalindrome(String s, int l, int r) {

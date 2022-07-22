@@ -6,7 +6,8 @@ import java.util.Stack;
 public class BalancedParenthesis {
 
     public static void main(String[] args) {
-        String str = "()([])";
+//        String str = "()([])";
+        String str = "(])";
         System.out.println(isBalanced(str));
 
     }
@@ -14,19 +15,26 @@ public class BalancedParenthesis {
     private static boolean isBalanced(String str) {
         Stack<Character> characterStack = new Stack<>();
 
-        for (int i = 0 ; i < str.length() ; i++) {
+        for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
             if (isOpening(c)) {
                 characterStack.push(c);
-            } else {
-                if (characterStack.isEmpty()) {
-                    return false;
-                } else if (!isMatching(c,characterStack.peek())) {
-                    return false;
-                } else {
-                    characterStack.pop();
-                }
+                continue;
             }
+
+            if (characterStack.isEmpty()) {
+                return false;
+            }
+
+            if ((characterStack.peek() == '(' && c == ')')
+                    || (characterStack.peek() == '{' && c == '}')
+                    || (characterStack.peek() == '[' && c == ']')
+            ) {
+                characterStack.pop();
+            } else {
+                return false;
+            }
+
         }
 
         return characterStack.isEmpty();
@@ -40,7 +48,7 @@ public class BalancedParenthesis {
     }
 
     private static boolean isMatching(char c1, char c2) {
-        if ((c1 == '(' && c2 == ')')||( c1 == '{' && c2 == '}') || (c1 == '[' && c2 == ']')) {
+        if ((c1 == '(' && c2 == ')') || (c1 == '{' && c2 == '}') || (c1 == '[' && c2 == ']')) {
             return true;
         }
 
