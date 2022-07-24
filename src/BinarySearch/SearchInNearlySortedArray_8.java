@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class SearchInNearlySortedArray {
+public class SearchInNearlySortedArray_8 {
 
     // Nearly Sorted Array means, an element can be found on i-1th or ith or i+1th index in sorted Arrays.
     // Example : {5,10,30,20,40} , here we have to search for 20 which on i+1th index.
@@ -15,9 +15,9 @@ public class SearchInNearlySortedArray {
             } else if ((start >= mid - 1) && nums[mid - 1] == target) {
                 return mid - 1;
             } else if (target > nums[mid]) {
-                start = mid + 1;
+                start = mid + 2;
             } else if (target < nums[mid]) {
-                end = mid - 1;
+                end = mid - 2;
             }
         }
 

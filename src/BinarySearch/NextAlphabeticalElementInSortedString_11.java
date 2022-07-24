@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class NextAlphabetInSortedString {
+public class NextAlphabeticalElementInSortedString_11 {
 
     private static int findNextAlphabet(char[] chars, char target, int start, int end) {
         int res = -1;

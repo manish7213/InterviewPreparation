@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class CeilOfAnElementInSortedArray {
+public class CeilOfAnElementInSortedArray_10 {
     // Ceil of n means : Smallest element greater than or Equal to n
 
     private static int findCeil(int[] nums, int target, int start, int end) {

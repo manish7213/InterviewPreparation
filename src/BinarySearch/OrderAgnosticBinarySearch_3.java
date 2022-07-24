@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class OrderAgnosticBinarySearch {
+public class OrderAgnosticBinarySearch_3 {
 
     private static int search(int[] numbs, int target, int start, int end) {
         if (numbs.length == 1 && numbs[0] == target){

@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class DescendingBinarySearch {
+public class DescendingBinarySearch_2 {
 
     private static int descendingBinarySearch(int[] numbs, int target, int start, int end) {
 

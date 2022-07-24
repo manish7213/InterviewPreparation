@@ -2,7 +2,7 @@ package BinarySearch;
 
 import java.util.Arrays;
 
-public class FirstLastPosInSortedArray {
+public class FirstLastOccurrenceInSortedArray_4 {
 
     public int[] searchRange(int[] nums, int target) {
 
@@ -63,7 +63,7 @@ public class FirstLastPosInSortedArray {
         int[] nums = {5, 7, 8, 8, 8, 10};
         int target = 8;
 
-        FirstLastPosInSortedArray ob = new FirstLastPosInSortedArray();
+        FirstLastOccurrenceInSortedArray_4 ob = new FirstLastOccurrenceInSortedArray_4();
         int[] res = ob.searchRange(nums, target);
         System.out.println(Arrays.toString(res));
     }

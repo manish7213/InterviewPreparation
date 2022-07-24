@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class BinarySearchInInfiniteSortedArray {
+public class BinarySearchInInfiniteSortedArray_12 {
 
     private static int searchInInfiniteSortedArray(int[] nums, int target, int start, int end) {
 

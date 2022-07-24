@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class FirstOccurrenceOfOneInInfiniteBinaryArray {
+public class FirstOccurrenceOfOneInInfiniteBinaryArray_13 {
 
     // This problem = Infinite Binary Search + First Occurrence In a Sorted Array
 

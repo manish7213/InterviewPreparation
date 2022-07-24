@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class TimesSortedArrayIsRotated {
+public class NumberOfTimesSortedArrayIsRotated_6 {
 
     // Intuition : If Array is sorted , then index of the smallest element will be the number of times that sorted Array is rotated.
     // find the index if smallest element using Binary Search.

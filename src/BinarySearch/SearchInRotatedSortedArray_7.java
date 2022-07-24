@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class SearchInRotatedArray {
+public class SearchInRotatedSortedArray_7 {
 
     private static int searchInRotatedArray(int[] nums, int target, int start, int end) {
         int smallestNumIndex = findSmallestNumberIndex(nums, start, end);

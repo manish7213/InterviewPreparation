@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class CountOfAnElementInSortedArray {
+public class CountOfAnElementInSortedArray_5 {
 
     private static int firstOccBinarySearch(int[] nums, int target, int start, int end) {
 

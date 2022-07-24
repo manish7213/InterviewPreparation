@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class FloorOfAnElementInSortedArray {
+public class FloorOfAnElementInSortedArray_8 {
     // Floor of n means : Greatest element smaller than or Equal to n
 
     private static int findFloor(int[] nums, int target, int start, int end) {
