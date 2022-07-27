@@ -13,13 +13,15 @@ public class PriorityQueueDemo {
     private static void maxHeapImpl() {
         System.out.println("********** MAX HEAP IMPL STARTS ***************");
         Queue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
-        maxHeap.add(10);
-        maxHeap.add(4);
+        maxHeap.add(1);
+        maxHeap.add(1);
         maxHeap.add(30);
         maxHeap.add(8);
 
         System.out.println(maxHeap.peek());
-        System.out.println(maxHeap.poll());
+        while (!maxHeap.isEmpty()) {
+            System.out.println(maxHeap.poll());
+        }
         System.out.println("After polling the top element : {} " + maxHeap);
         System.out.println("***************** MAX HEAP IMPL ENDS *****************");
     }
