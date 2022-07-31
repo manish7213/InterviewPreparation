@@ -2,17 +2,6 @@ package SlidingWindow;
 
 public class MaximumSumOfSubArrayOfGivenSize {
 
-    public static void main(String[] args) {
-        int[] arr = {1, 3, 4, 5, 6, 18, 4};
-        int k = 3;
-        int bruteForceMax = findMaxSumBruteForce(arr, k);
-        int slidingWindowMax = findMaxSumSlidingWindow(arr, k);
-
-        System.out.println(bruteForceMax);
-        System.out.println(slidingWindowMax);
-
-    }
-
     private static int findMaxSumSlidingWindow(int[] arr, int k) {
         int i = 0;
         int j = 0;
@@ -34,6 +23,17 @@ public class MaximumSumOfSubArrayOfGivenSize {
         }
 
         return max;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 4, 5, 6, 18, 4};
+        int k = 3;
+        int bruteForceMax = findMaxSumBruteForce(arr, k);
+        int slidingWindowMax = findMaxSumSlidingWindow(arr, k);
+
+        System.out.println(bruteForceMax);
+        System.out.println(slidingWindowMax);
+
     }
 
     private static int findMaxSumBruteForce(int[] arr, int k) {
